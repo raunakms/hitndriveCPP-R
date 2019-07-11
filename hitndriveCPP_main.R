@@ -10,7 +10,7 @@ runHITnDRIVE <- function(dir.wrk, batch.name, output.name, network.name, filenam
 
 ### FUNCTION: get.dirs() ---
 get.dirs <- function(dir.wrk, batch.name){
-    dir.network <- file.path(dir.wrk, "influence")
+    dir.network <- file.path(dir.wrk, "graph")
     dir.lib <- file.path(dir.wrk, "lib")
     dir.analysis <- file.path(dir.wrk, "analysis")    
     dir.batch <- file.path(dir.analysis, batch.name)
