@@ -46,7 +46,7 @@ First create the directory structure as instructed below. `<batch.name>` is user
 - Configure `../hitndrive/lib/Makefile` with path to CPLEX as instructed in <https://github.com/sfu-compbio/hitndrive>
 - Run `make` command in `../hitndrive/lib/` as instructed in <https://github.com/sfu-compbio/hitndrive>
 - Copy `hitndriveCPP_main.R` file from this repo. to `../hitndrive/lib/`
-- Copy input data files (alteration and expression-outlier) to the following path `../hitndrive/alalysis/<batch.name>/` 
+- Copy input data files (alteration and expression-outlier) to the following path `../hitndrive/analysis/<batch.name>/` 
 - Copy network graph (interaction network) to the following path `../hitndrive/graph/` 
 
 #### 3. Generation of Graph Influence Matrix
@@ -58,7 +58,7 @@ getHTMatrixInversionR(dir.wrk, batch.name, network.name)
 ```
 
 #### 4. Generating and Solving ILP
-Then execute `runHITnDRIVE()` function. This will first generate the CPLEX INPUT FILES (.lp) within the following path `../hitndrive/alalysis/<batch.name>/scripts`
+Then execute `runHITnDRIVE()` function. This will first generate the CPLEX INPUT FILES (.lp) within the following path `../hitndrive/analysis/<batch.name>/scripts`
 ```sh
 # GENERATE ILP FILES ---
 runHITnDRIVE(dir.wrk, batch.name, output.name, network.name, filename.alteration, filename.outlier, generateILP=TRUE)
@@ -70,4 +70,4 @@ $ sbatch [../analysis/<batch.name>/scripts/main.sh]
 runHITnDRIVE(dir.wrk, batch.name, output.name, network.name, filename.alteration, filename.outlier, generateILP=FALSE)
 ```
 
-All resulting files can be found within the following path `../hitndrive/alalysis/<batch.name>/`  
+All resulting files can be found within the following path `../hitndrive/analysis/<batch.name>/`  
