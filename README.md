@@ -29,4 +29,4 @@ Then copy the `hitndriveCPP_main.R` file to the same directory where the C++ scr
 <br/><br/>
 
 ## How to run HIT'nDRIVE using hitndriveCPPr
-See the (wiki)(https://github.com/raunakms/hitndriveCPPr/wiki) for detailed instruction on installation and usage of HIT'nDRIVE as well as instructions for input data preparations.
+See the [wiki](https://github.com/raunakms/hitndriveCPPr/wiki) for detailed instruction on installation and usage of HIT'nDRIVE as well as instructions for input data preparations.
