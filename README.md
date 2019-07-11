@@ -4,7 +4,7 @@ This repository contains R-wrapper functions to execute **HIT'nDRIVE** (<https:/
 
 Please refer to <https://github.com/sfu-compbio/hitndrive> if your are working on a different environment.
 
-Publications
+### Publications
 ----
 - Shrestha R, Hodzic E, Sauerwald T, Dao P, Yeung J, Wang K, Anderson S, Haffari G, Collins CC, and Sahinalp SC. 2017. HIT’nDRIVE: Patient-Specific Multi-Driver Gene Prioritization for Precision Oncology. Genome Research. doi:10.1101/gr.221218.117 (http://dx.doi.org/10.1101/gr.221218.117)
 - Shrestha R, Hodzic E, Yeung J, Wang K, Sauerwald T, Dao P, Anderson S, Beltran H, Rubin MA, Collins CC, Haffari G and Sahinalp SC. 2014. HIT’nDRIVE: Multi-driver gene prioritization based on hitting time. Research in Computational Molecular Biology: 18th Annual International Conference, RECOMB 2014, Pittsburgh, PA, USA, April 2-5, 2014, 293–306. (https://link.springer.com/chapter/10.1007/978-3-319-05269-4_23)
@@ -25,7 +25,7 @@ git clone git@github.com:sfu-compbio/hitndrive.git
 ```
 Then copy the `hitndriveCPP_main.R` file to the same directory where the CPP scripts from above is installed.
 
-#### Usage in brief
+### Usage in brief
 If installing for the first time execute `buildGraph()` and `getHTMatrixInversionR()` functions in R. Skip this if you have already executed these two functions before.
 ```sh
 buildGraph(dir.wrk, batch.name, network.name, file.network)
