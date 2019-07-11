@@ -26,6 +26,21 @@ git clone git@github.com:sfu-compbio/hitndrive.git
 Then copy the `hitndriveCPP_main.R` file to the same directory where the CPP scripts from above is installed.
 
 ### Usage in brief
+See the wiki for detailed instruction
+
+#### 1. Create Directory Structure
+First create the directory structure as instructed below. 
+```sh
+../hitndrive/
+    |-- lib/
+    |-- graph/
+    |-- analysis/
+        |-- <batch.name>/
+```
+- Copy input data files (alteration and expression-outlier) to the following path `../hitndrive/alalysis/<batch.name>/` 
+- Copy network graph (interaction network) to the following path `../hitndrive/graph/` 
+
+#### 2. Generation of Graph Influence Matrix
 If installing for the first time execute `buildGraph()` and `getHTMatrixInversionR()` functions in R. Skip this if you have already executed these two functions before.
 ```sh
 buildGraph(dir.wrk, batch.name, network.name, file.network)
@@ -33,7 +48,8 @@ buildGraph(dir.wrk, batch.name, network.name, file.network)
 getHTMatrixInversionR(dir.wrk, batch.name, network.name)
 ```
 
-Then execute `runHITnDRIVE()` function 
+#### 3. Generating and Solving ILP
+Then execute `runHITnDRIVE()` function. This will first generate the CPLEX INPUT FILES (.lp) within the following path `../hitndrive/alalysis/<batch.name>/scripts`
 ```sh
 # GENERATE ILP FILES ---
 runHITnDRIVE(dir.wrk, batch.name, output.name, network.name, filename.alteration, filename.outlier, generateILP=TRUE)
@@ -44,3 +60,5 @@ $sbatch [../analysis/<batch.name>/scripts/main.sh]
 # AFTER YOU HAVE OBTAINED SOLUTION FILES FROM CPLEX, RUN THIS TO GET FINAL DRIVER GENES ---
 runHITnDRIVE(dir.wrk, batch.name, output.name, network.name, filename.alteration, filename.outlier, generateILP=FALSE)
 ```
+
+All resulting files can be found within the following path `../hitndrive/alalysis/<batch.name>/`  
