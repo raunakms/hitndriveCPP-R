@@ -55,7 +55,7 @@ Then execute `runHITnDRIVE()` function. This will first generate the CPLEX INPUT
 runHITnDRIVE(dir.wrk, batch.name, output.name, network.name, filename.alteration, filename.outlier, generateILP=TRUE)
 
 # THEN SUBMIT YOUR JOB(s) IN SLURM CLUSTER MACHINE TO RUN CPLEX ILP SOLVER ---
-$sbatch [../analysis/<batch.name>/scripts/main.sh]
+$ sbatch [../analysis/<batch.name>/scripts/main.sh]
 
 # AFTER YOU HAVE OBTAINED SOLUTION FILES FROM CPLEX, RUN THIS TO GET FINAL DRIVER GENES ---
 runHITnDRIVE(dir.wrk, batch.name, output.name, network.name, filename.alteration, filename.outlier, generateILP=FALSE)
