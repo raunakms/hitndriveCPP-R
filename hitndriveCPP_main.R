@@ -1,5 +1,5 @@
 ### FUNCTION: runHITnDRIVE() ---
-runHITnDRIVE <- function(dir.wrk, batch.name, output.name, network.name, filename.alteration, filename.outlier, file.seed.genes="NULL", generateILP){
+runHITnDRIVE <- function(dir.wrk, batch.name, output.name, network.name, filename.alteration, filename.outlier, alpha, beta, gamma, file.seed.genes="NULL", generateILP){
     if(generateILP == TRUE){
         get.parms(dir.wrk, batch.name, output.name, alpha, beta, gamma)
         prepareHITnDRIVEscript(dir.wrk, batch.name, network.name, filename.alteration, filename.outlier, file.seed.genes)
